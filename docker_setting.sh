@@ -13,9 +13,10 @@ distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
 
 sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
 
-#when there's no key
-apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub
-apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/7fa2af80.pub
+only do in 1804
+#when there's no key 
+#apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub
+#apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/7fa2af80.pub
 
 #launch docker
 sudo docker run --gpus all -it --net=host --privileged \
